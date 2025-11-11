@@ -1,25 +1,32 @@
 <!-- ============================================== -->
-<!-- 🌿 FOOTER  -->
-<!-- Matches the refined design but removes policy and social links -->
+<!-- 🌿 FOOTER -->
 <!-- ============================================== -->
+ <!-- Font Awesome (CDN version — works locally without restriction) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 <footer class="mm-footer py-5">
   <div class="container">
+
     <!-- Structured grid layout with borders -->
-    <div class="row text-start border-top border-bottom border-success-subtle py-4 align-items-center">
+    <div class="row align-items-center border-top border-bottom border-success-subtle py-4">
       
-      <!-- ========================== -->
       <!-- 🔹 LEFT COLUMN -->
-      <!-- Brand name and email -->
-      <!-- ========================== -->
-      <div class="col-md-6 mb-4 mb-md-0">
-        <h3 class="mm-logo mb-3">Mila Metius</h3>
+      <div class="col-md-4 text-md-start text-center mb-3 mb-md-0">
+        <h3 class="mm-logo mb-0">Mila Metius</h3>
       </div>
 
-      <!-- ========================== -->
+      <!-- 🔹 CENTER COLUMN (Instagram icon) -->
+      <div class="col-md-4 text-center mb-3 mb-md-0">
+         <a href="https://www.instagram.com/milametius/" 
+             target="_blank" 
+             class="mm-social" 
+             aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+
       <!-- 🔹 RIGHT COLUMN -->
-      <!-- Physical address and copyright -->
-      <!-- ========================== -->
-      <div class="col-md-6 text-md-end">
+      <div class="col-md-4 text-md-end text-center">
         <p class="mb-1">San Francisco, CA</p>
         <p class="small m-0">© 2025 Mila Metius. Designed with care.</p>
       </div>
