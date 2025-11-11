@@ -337,6 +337,42 @@ header nav a:hover {
 .about-section .row {
   align-items: center;
 }
+/* Adds consistent padding & responsive polish */
+.mm-story-image {
+  aspect-ratio: 4 / 5;         
+  min-height: 400px;            
+}
+
+#about {
+  background-color: #fff;      
+}
+
+#about .container {
+  max-width: 1200px;  
+}
+
+/* Make sure text feels comfortable on large screens */
+#about p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Default desktop styling */
+/* Image sizing for all screens */
+.mm-story-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  display: block; /* removes inline whitespace gap */
+}
+
+/* Fix spacing below the image on mobile */
+.mm-story-image {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 
 /* ------------------------------------------------------
    FADE-IN ON SCROLL ANIMATION
@@ -467,5 +503,30 @@ footer a:hover {
   }
   #contact form {
     margin-top: 1.5rem;
+  }
+}
+/* Small screen optimization */
+@media (max-width: 768px) {
+  #about .row {
+    text-align: center;
+  }
+  #about img {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mm-story-image img {
+    height: 150px;
+    margin-bottom: 0;
+  }
+
+  /* tighten up the section spacing */
+  #about .row {
+    margin-bottom: 0 !important;
+  }
+
+  #about {
+    padding-bottom: 2rem !important;
   }
 }
