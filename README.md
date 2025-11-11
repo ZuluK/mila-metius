@@ -1,4 +1,4 @@
-# Mila Metius — Refined Site
+# Mila Metius 
 
 A small static portfolio / product showcase site built with plain HTML, CSS Bootstrap, and a little JavaScript. This repository contains the site's source files (HTML pages, styles, scripts, and assets).
 
@@ -37,7 +37,7 @@ npx http-server -c-1 8000
 - For GitHub Pages, push the repo and enable Pages from the repository settings (branch `main` or `gh-pages`, or use the repository root).
 
 ## Contact
-Maintainer: Rich Spence @richspence@gmail.com
+Maintainer: Rich Spence -richspence@gmail.com
 
 ---
 Created on: 2025-11-09

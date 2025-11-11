@@ -37,6 +37,7 @@
 ------------------------------------------------------ */
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
@@ -44,6 +45,27 @@ body {
   background: @bg;
   color: @green;
   line-height: 1.6;
+  height: 100%;
+  margin: 0;                 /* remove the browser's default 8px margin */
+  display: flex;             /* make the page a flex column */
+  flex-direction: column;
+}
+
+/* Let main grow to fill the available space; footer sits after it */
+main {
+  flex: 1 0 auto;
+}
+
+/* Footer should not stretch; it just sits at the end */
+.mm-footer {
+  flex-shrink: 0;
+  margin: 0 !important;      /* safety, prevents any accidental bottom gap */
+}
+
+/* If you inject the footer into a #footer div, make sure that wrapper has no margins */
+#footer {
+  margin: 0;
+  padding: 0;
 }
 
 /* ------------------------------------------------------
