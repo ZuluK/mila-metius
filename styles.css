@@ -1,0 +1,449 @@
+/* ======================================================
+   Mila Metius — Refined styles.css
+   Author: Rich Spence
+   Description: Organized and formatted for clarity
+====================================================== */
+
+/* ------------------------------------------------------
+   COLOR VARIABLES
+------------------------------------------------------ */
+@bg: #F5F3E8;
+@green: #505C35;
+@accent: #B8C97C;
+@whybg: #4B5932;
+@whytext: #F5F3E8;
+@radius: 14px;
+
+/* ------------------------------------------------------
+   FONT VARIABLES
+------------------------------------------------------ */
+.font-poppins {
+  --mm-font: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+.font-mulish {
+  --mm-font: 'Mulish', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+:root {
+  --mm-font: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+.font-questrial {
+  --mm-font: 'Questrial', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* ------------------------------------------------------
+   BASE STYLES
+------------------------------------------------------ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--mm-font);
+  background: @bg;
+  color: @green;
+  line-height: 1.6;
+}
+
+/* ------------------------------------------------------
+   HEADER & NAV
+------------------------------------------------------ */
+header .mm-logo,
+header nav a {
+  text-decoration: none;
+  color: @green;
+}
+
+header nav a:hover {
+  opacity: 0.85;
+}
+#navbar {
+  background-color: #DADDCB !important;
+}
+
+/* ------------------------------------------------------
+   HERO SECTION
+------------------------------------------------------ */
+.mm-hero .mm-display {
+  color: @green;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 1rem;
+}
+
+.mm-hero .mm-tagline {
+  max-width: 680px;
+  font-size: 1.05rem;
+}
+
+.mm-hero .mm-hero-image {
+  background: #ddd;
+}
+
+/* ------------------------------------------------------
+   BUTTONS
+------------------------------------------------------ */
+.mm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* Filled Olive Green Button */
+.mm-btn-accent {
+  background-color: #B8C97C;
+  border: 2px solid #505C35;
+  color: #505C35;
+}
+
+.mm-btn-accent:hover {
+  background-color: #a8b86c;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Outline Button */
+.mm-btn-outline {
+  background-color: transparent;
+  border: 2px solid #505C35;
+  color: #505C35;
+}
+
+.mm-btn-outline:hover {
+  background-color: rgba(80, 92, 53, 0.1);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------------------------------
+   SECTION TITLES
+------------------------------------------------------ */
+.mm-section-title {
+  color: @green;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.mm-section-title-sm {
+  color: @green;
+  font-weight: 700;
+  font-size: clamp(1.75rem, 3.5vw, 2.2rem);
+}
+
+.mm-section-subtitle {
+  color: @green;
+  max-width: 760px;
+}
+
+/* ------------------------------------------------------
+   WHY SECTION (DARK GREEN)
+------------------------------------------------------ */
+.why-bg-color {
+  background-color: rgb(70, 87, 42) !important;
+  color: rgb(255, 253, 246) !important;
+  padding: 5rem 0;
+}
+
+.mm-kicker {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ------------------------------------------------------
+   PRODUCT GRID
+------------------------------------------------------ */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.product-card {
+  display: block;
+  border: 1px solid lighten(@green, 40%);
+  border-radius: @radius;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+}
+
+.product-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-card h5 {
+  color: @green;
+  font-weight: 700;
+}
+
+.product-card .p-3 {
+  padding: 1rem;
+}
+
+
+/* ------------------------------------------------------
+   CONTACT CARD & SOCIAL ICONS
+------------------------------------------------------ */
+.mm-card {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid lighten(@green, 40%);
+  border-radius: @radius;
+}
+
+.mm-social {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;           /* black circle background */
+  color: #fff;                /* white icon */
+  font-size: 1.5rem;          /* increase icon size */
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+  margin-top: 1rem;           /* optional spacing */
+}
+
+.mm-social:hover {
+  background: #505C35;        /* your signature olive green */
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.mm-social img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+.mm-social + .mm-social {
+  margin-left: 12px;
+}
+
+
+#contact .container {
+  max-width: 900px; /* makes the form wider without stretching edge-to-edge */
+}
+
+/* ------------------------------------------------------
+   CONTACT SECTION – FULL-WIDTH FORM VERSION
+   (Updated layout for one-column contact section)
+------------------------------------------------------ */
+
+/* General container width */
+#contact .container {
+  max-width: 900px;                /* comfortably wide but not edge-to-edge */
+}
+
+/* Form labels and inputs */
+#contact label {
+  font-weight: 500;
+  color: #505C35;
+  margin-bottom: 0.4rem;
+}
+
+#contact input,
+#contact textarea {
+  border: 1px solid rgba(80, 92, 53, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus state for better accessibility */
+#contact input:focus,
+#contact textarea:focus {
+  border-color: #B8C97C;
+  box-shadow: 0 0 0 3px rgba(184, 201, 124, 0.3);
+  outline: none;
+}
+
+/* Send button alignment */
+#contact button.mm-btn {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+
+/* ------------------------------------------------------
+   ABOUT PAGE (about.html)
+------------------------------------------------------ */
+.about-section {
+  /* color: #505C35; */
+  padding: 6rem 0;
+  line-height: 1.7;
+}
+
+.about-section h2 {
+  font-weight: 700;
+  /* color: #505C35; */
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 2rem;
+}
+
+.about-section p {
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+}
+
+.about-section img {
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about-section .row {
+  align-items: center;
+}
+
+/* ------------------------------------------------------
+   FADE-IN ON SCROLL ANIMATION
+------------------------------------------------------ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger fade-in for multiple children */
+.fade-in:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.fade-in:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.fade-in:nth-child(4) {
+  transition-delay: 0.45s;
+}
+
+/* ------------------------------------------------------
+   FOOTER
+------------------------------------------------------ */
+.mm-footer {
+  background-color: #DADDCB;
+  /* color: #505C35; */
+  font-size: 0.95rem;
+}
+
+.mm-footer a {
+  /* color: #505C35; */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mm-footer a:hover {
+  color: #72834A;
+  text-decoration: underline;
+}
+
+.mm-footer .border-success-subtle {
+  border-color: rgba(80, 92, 53, 0.3) !important;
+}
+
+.footer-email {
+  /* color: #505C35; */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-email:hover {
+  color: #72834A;
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------
+   UTILITIES
+------------------------------------------------------ */
+.py-6 {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+/* ------------------------------------------------------
+   NAVIGATION & FOOTER LINKS — BRAND COLORS
+------------------------------------------------------ */
+a,
+nav a,
+footer a {
+  color: #505C35;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+a:hover,
+nav a:hover,
+footer a:hover {
+  color: #B8C97C;
+  opacity: 0.9;
+}
+
+a:active,
+a:focus,
+nav a:active,
+nav a:focus {
+  color: #72834A;
+  outline: none;
+}
+
+nav a:hover,
+footer a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .about-section {
+    padding: 3.5rem 1.5rem;
+    text-align: center;
+  }
+
+  .about-section img {
+    margin-bottom: 2rem;
+  }
+
+  .about-section h2 {
+    font-size: 2rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+}
+/* Mobile-friendly spacing */
+@media (max-width: 768px) {
+  #contact .container {
+    padding: 0 1rem;
+  }
+  #contact form {
+    margin-top: 1.5rem;
+  }
+}

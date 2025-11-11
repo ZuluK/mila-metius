@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- ========================== -->
+  <!-- 🔷 META & HEAD RESOURCES -->
+  <!-- ========================== -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mila Metius — Handcrafted Bags</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome (CDN version — works locally without restriction) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-questrial">
+  <!-- ========================== -->
+  <!-- 🔷 NAVBAR (Loaded Dynamically) -->
+  <!-- ========================== -->
+  <div id="navbar"></div>
+
+  <!-- ========================== -->
+  <!-- 🔷 MAIN CONTENT -->
+  <!-- ========================== -->
+  <main>
+
+    <!-- ========================== -->
+    <!-- 🌿 HERO SECTION -->
+    <!-- ========================== -->
+    <section id="hero" class="mm-hero py-5 fade-in">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          
+          <!-- Hero Text -->
+          <div class="col-lg-6">
+            <h1 class="mm-display">Craft your next bag<br>with Mila&nbsp;Metius.</h1>
+            <p class="mm-tagline">
+              Discover unique designs and express your personal style with Mila&nbsp;Metius. 
+              Our bags are crafted to reflect your individuality. Start creating your custom bag today 
+              and let your creativity&nbsp;shine!
+            </p>
+            <div class="d-flex gap-3 mt-4">
+              <a href="collections.html" class="mm-btn mm-btn-accent">Explore Collections</a>
+              <a href="#contact" class="mm-btn mm-btn-outline">Contact</a>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="col-lg-6">
+            <div class="mm-hero-image ratio ratio-4x3 rounded-3 overflow-hidden">
+              <img src="assets/hero.jpg" alt="Sewing machine close-up" class="w-100 h-100 object-fit-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== -->
+    <!-- 🌿 WHY CHOOSE SECTION -->
+    <!-- ========================== -->
+    <section id="why" class="why-bg-color fade-in">
+      <div class="container text-center">
+        <h2 class="mm-section-title">Why Choose Mila Metius</h2>
+        <p class="mm-section-subtitle mx-auto">
+          Choose Mila Metius for unparalleled style, quality, and comfort in every&nbsp;handbag.
+        </p>
+
+        <div class="row text-start g-5 mt-4">
+          <div class="col-md-4">
+            <h5 class="mm-kicker">Customization</h5>
+            <p>Design your own handbag in San Francisco using locally sourced materials for a truly personal&nbsp;piece.</p>
+          </div>
+          <div class="col-md-4">
+            <h5 class="mm-kicker">Uniqueness</h5>
+            <p>Explore a curated collection spanning totes, clutches, and crossbodies in refined&nbsp;textures.</p>
+          </div>
+          <div class="col-md-4">
+            <h5 class="mm-kicker">Creativity</h5>
+            <p>Express yourself with thoughtful details and silhouettes that evolve with your everyday&nbsp;rhythm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== -->
+    <!-- 🌿 CONTACT SECTION -->
+    <!-- ========================== -->
+    <section id="contact" class="py-6 border-top">
+      <div class="container">
+        <div class="row justify-content-center">
+          
+          <!-- Full-Width Contact Form -->
+          <div class="col-lg-8">
+            <h3 class="mm-section-title-sm">Contact</h3>
+            <p>For inquiries or custom orders, send us a message.</p>
+
+            <form method="POST" action="https://formspree.io/f/xpwkaney" class="row g-3">
+              <!-- First Name -->
+              <div class="col-md-6">
+                <label class="form-label">First name</label>
+                <input type="text" class="form-control" name="first" required>
+              </div>
+
+              <!-- Last Name -->
+              <div class="col-md-6">
+                <label class="form-label">Last name</label>
+                <input type="text" class="form-control" name="last">
+              </div>
+
+              <!-- Email -->
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" name="_replyto" required>
+              </div>
+
+              <!-- Phone -->
+              <div class="col-md-6">
+                <label class="form-label">Phone</label>
+                <input type="text" class="form-control" name="phone">
+              </div>
+
+              <!-- Message -->
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" rows="4" name="message" required></textarea>
+              </div>
+
+              <!-- Honeypot (Spam Protection) -->
+              <input type="text" name="_gotcha" style="display:none">
+
+              <!-- Submit -->
+              <div class="col-12">
+                <button class="mm-btn mm-btn-accent" type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Instagram Icon -->
+        <div class="text-center mt-4">
+          <a href="https://www.instagram.com/milametius/" 
+             target="_blank" 
+             class="mm-social" 
+             aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================== -->
+  <!-- 🔷 FOOTER (Loaded Dynamically) -->
+  <!-- ========================== -->
+  <div id="footer"></div>
+
+  <!-- ========================== -->
+  <!-- 🔷 JAVASCRIPT & FETCH LOGIC -->
+  <!-- ========================== -->
+  <script>
+    // Load shared navbar
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+
+    // Load shared footer
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+
+  <!-- Bootstrap JS Bundle + Custom Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+  // Automatically clear the form after successful Formspree submission
+  const form = document.querySelector('form[action*="formspree.io"]');
+
+  if (form) {
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault(); // Prevent default redirect or reload
+
+      const formData = new FormData(form);
+
+      // Send the form data using fetch
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        // ✅ Clear the form
+        form.reset();
+
+        // ✅ Optional: Show a success message
+        alert('Thank you! Your message has been sent successfully.');
+
+      } else {
+        alert('Oops! There was a problem sending your message.');
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
