@@ -1,7 +1,6 @@
 /* ======================================================
    Mila Metius — Refined styles.css
    Author: Rich Spence
-   Description: Organized and formatted for clarity
 ====================================================== */
 
 /* ------------------------------------------------------
@@ -266,7 +265,7 @@ header nav a:hover {
 }
 
 /* ------------------------------------------------------
-   COMING SOON OVERLAY (Hover)
+   COMING SOON OVERLAY
 ------------------------------------------------------ */
 .product-card::before {
   content: "COMING SOON";
