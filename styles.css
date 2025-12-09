@@ -70,6 +70,9 @@ main {
 /* ------------------------------------------------------
    HEADER & NAV
 ------------------------------------------------------ */
+body.home .nav-home {
+    display: none;
+}
 header .mm-logo,
 header nav a {
   text-decoration: none;
