@@ -78,7 +78,7 @@
             </p>
             <div class="d-flex gap-3 mt-4">
               <a href="collections.html" class="mm-btn mm-btn-accent">Explore Collections</a>
-              <a href="#contact" class="mm-btn mm-btn-outline">Contact</a>
+              <a href="contact.html" class="mm-btn mm-btn-outline">Contact</a>
             </div>
           </div>
 
@@ -119,60 +119,62 @@
       </div>
     </section>
 
-    <!-- ========================== -->
-    <!-- 🌿 CONTACT SECTION -->
-    <!-- ========================== -->
-    <section id="contact" class="py-6 border-top">
-      <div class="container">
-        <div class="row justify-content-center">
-          
-          <!-- Full-Width Contact Form -->
-          <div class="col-lg-8">
-            <h3 class="mm-section-title-sm">Contact us</h3>
-            <p>For inquiries or custom orders, send us a message.</p>
+  <!-- ========================== -->
+  <!-- 🌿 POP-UP SHOWCASE SECTION -->
+  <!-- ========================== -->
+  <section id="showcase" class="py-6 fade-in">
+    <div class="container">
 
-            <form method="POST" id="contact-form" action="https://formspree.io/f/xpwkaney" class="row g-3">
-              <!-- First Name -->
-              <div class="col-md-6">
-                <label class="form-label">First name</label>
-                <input type="text" class="form-control" name="first" required>
-              </div>
+      <h2 class="mm-section-title text-center">Pop-Up Showcase</h2>
+      <p class="mm-section-subtitle text-center mx-auto" style="max-width: 750px;">
+        A look inside our recent San Francisco pop-up — part of <a href="https://www.icasf.org/calendar/294-elsewhere-a-fashion-gift-experience">ICA SF’s Elsewhere: A Fashion + Gift Experience</a>, a weekend celebrating art, design, and craft. The museum transformed into a concept-shop-meets-exhibition space featuring emerging designers and makers. Our showcase highlighted handcrafted bags, unique silhouettes, and the artistry behind every Mila&nbsp;Metius&nbsp;piece.
+      </p>
 
-              <!-- Last Name -->
-              <div class="col-md-6">
-                <label class="form-label">Last name</label>
-                <input type="text" class="form-control" name="last">
-              </div>
+      <div class="showcase-carousel mt-5">
 
-              <!-- Email -->
-              <div class="col-md-6">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control" name="_replyto" required>
-              </div>
+        <!-- Left arrow -->
+        <button class="showcase-nav showcase-nav-prev" aria-label="Previous">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
 
-              <!-- Phone -->
-              <div class="col-md-6">
-                <label class="form-label">Phone</label>
-                <input type="text" class="form-control" name="phone">
-              </div>
-
-              <!-- Message -->
-              <div class="col-12">
-                <label class="form-label">Message</label>
-                <textarea class="form-control" rows="4" name="message" required></textarea>
-              </div>
-
-              <!-- Honeypot (Spam Protection) -->
-              <input type="text" name="_gotcha" style="display:none">
-
-              <!-- Submit -->
-              <div class="col-12">
-                <button class="mm-btn mm-btn-accent" type="submit">Send</button>
-              </div>
-            </form>
+        <!-- Scrollable track -->
+        <div class="showcase-track">
+          <div class="showcase-item">
+            <img src="assets/images/IMG_BAG_LALABOO.jpg" alt="Black Mila Metius bag in a holiday setting">
           </div>
+          <div class="showcase-item">
+            <img src="assets/images/IMG_XMAS_BAG.jpeg" alt="Brown tote with Mila Metius tag and plush charm">
+          </div>
+          <div class="showcase-item">
+            <img src="assets/images/IMG_BLACK_XL_BAG.jpeg" alt="Large Black tote crossbody on mannequin">
+          </div>
+          <div class="showcase-item">
+            <img src="assets/images/IMG_GREY_BLACK_BAGS.jpg" alt="Mila Metius display at pop-up event">
+          </div>
+          <div class="showcase-item">
+            <img src="assets/images/IMG_BROW_CREAM_BAGS.jpeg" alt="Brown and cream colored Mila Metius bags on display">
+          </div>
+          <div class="showcase-item">
+            <img src="assets/images/IMG_BAG_DISPLAY.jpeg" alt="Mila Metius bag display with holiday decor">
+          </div>
+          <div class="showcase-item">
+            <img src="assets/images/IMG_BAG_DISPLAY_2.jpeg" alt="Mila Metius bag display close-up with holiday decor">
+          </div>
+          <!-- Add more <div class="showcase-item">...</div> if you want -->
         </div>
-    </section>
+
+        <!-- Right arrow -->
+        <button class="showcase-nav showcase-nav-next" aria-label="Next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  
 
   </main>
 
@@ -199,7 +201,7 @@
   <!-- Bootstrap JS Bundle + Custom Script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
-  <script>
+  <!-- <script>
   // Automatically clear the form after successful Formspree submission
   const form = document.querySelector('form[action*="formspree.io"]');
 
@@ -228,7 +230,7 @@
       }
     });
   }
-</script>
+</script> -->
 
 </body>
 </html>

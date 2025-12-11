@@ -47,7 +47,11 @@ body {
   height: 100%;
   margin: 0;                 /* remove the browser's default 8px margin */
   display: flex;             /* make the page a flex column */
-  flex-direction: column;
+  flex-direction: column; 
+}
+
+.no-wrap {
+  white-space: nowrap;
 }
 
 /* Let main grow to fill the available space; footer sits after it */
@@ -73,6 +77,7 @@ main {
 body.home .nav-home {
     display: none;
 }
+
 header .mm-logo,
 header nav a {
   text-decoration: none;
@@ -85,6 +90,14 @@ header nav a:hover {
 #navbar {
   background-color: #DADDCB !important;
 }
+/* Sticky navbar on all pages */
+/* #navbar .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #DADDCB ; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04); /* subtle depth, optional */
+} */
 
 /* ------------------------------------------------------
    HERO SECTION
@@ -184,6 +197,104 @@ header nav a:hover {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
+
+/* ============================================= */
+/* 🌿 POP-UP SHOWCASE HORIZONTAL CAROUSEL        */
+/* ============================================= */
+
+.showcase-carousel {
+  position: relative;
+}
+
+.showcase-track {
+  display: flex;
+  gap: 1.75rem;
+  overflow-x: auto;             /* keeps scrolling functionality */
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem;
+  scroll-behavior: smooth;
+
+  /* Hide scrollbar — cross browser */
+  -ms-overflow-style: none;     /* IE + Edge */
+  scrollbar-width: none;        /* Firefox */
+}
+
+.showcase-track::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}
+
+
+.showcase-track::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.25);
+  border-radius: 4px;
+}
+
+.showcase-item {
+  flex: 0 0 280px;                 /* width of each card */
+  scroll-snap-align: center;
+}
+
+.showcase-item img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase-item img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+/* Arrow buttons */
+.showcase-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(255,255,255,0.9);
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.showcase-nav i {
+  font-size: 0.9rem;
+}
+
+.showcase-nav-prev {
+  left: -10px;
+}
+
+.showcase-nav-next {
+  right: -10px;
+}
+
+/* Hide arrows on small screens (swipe instead) */
+@media (max-width: 767.98px) {
+  .showcase-nav {
+    display: none;
+  }
+
+  .showcase-item {
+    flex: 0 0 75vw;            /* slightly wider on phones */
+    height: auto;
+  }
+
+  .showcase-item img {
+    height: 320px;
+  }
+}
+
+
 
 /* ------------------------------------------------------
    PRODUCT GRID / COLLECTIONS PAGE
@@ -352,6 +463,75 @@ header nav a:hover {
     font-size: 1rem;
   }
 }
+
+
+/* ========================= */
+/* 🌿 CONTACT PAGE HERO      */
+/* ========================= */
+
+.contact-hero {
+  position: relative;
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid #d1d8c4;
+
+  /* Darker overlay so light text pops */
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("assets/images/IMG_BAG_DISPLAY.jpeg");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.contact-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #fff;            /* light text */
+}
+
+.contact-subtitle {
+  max-width: 650px;
+  font-size: 1.1rem;
+  color: #f3f3f3;         /* soft light grey */
+  margin-top: 1rem;
+}
+
+.contact-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e5e5e5;
+  margin-bottom: 0.75rem;
+}
+
+.mm-muted-copy {
+  color: #6c7074;
+  font-size: 0.98rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Mobile tweaks for hero image framing */
+@media (max-width: 767.98px) {
+  .contact-hero {
+    padding: 4rem 1.5rem 3rem;
+    background-position: center bottom;  /* show more of the lower part of the photo */
+  }
+
+  .contact-title {
+    font-size: 2.2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+  }
+}
+
 
 /* ------------------------------------------------------
    CONTACT CARD & SOCIAL ICONS

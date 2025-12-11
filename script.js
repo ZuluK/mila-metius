@@ -49,5 +49,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // Observe all fade-in elements
   fadeElements.forEach(el => observer.observe(el));
 });
+// ===============================
+// Pop-Up Showcase horizontal scroll
+// ===============================
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.querySelector(".showcase-track");
+  const btnPrev = document.querySelector(".showcase-nav-prev");
+  const btnNext = document.querySelector(".showcase-nav-next");
+
+  if (!track || !btnPrev || !btnNext) return;
+
+  const scrollAmount = () => track.clientWidth * 0.8;
+
+  btnPrev.addEventListener("click", () => {
+    track.scrollBy({ left: -scrollAmount(), behavior: "smooth" });
+  });
+
+  btnNext.addEventListener("click", () => {
+    track.scrollBy({ left: scrollAmount(), behavior: "smooth" });
+  });
+});
 
 
